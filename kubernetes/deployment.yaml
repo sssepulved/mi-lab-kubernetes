@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mi-app-deployment
+spec:
+  replicas: 2 # Queremos 2 copias de nuestra aplicación
+  selector:
+    matchLabels:
+      app: mi-app-web
+  template:
+    metadata:
+      labels:
+        app: mi-app-web
+    spec:
+      containers:
+      - name: mi-app-container
+        image: mi-app-web:1.0 # Usa la "caja" que construimos localmente
+        ports:
+        - containerPort: 80
