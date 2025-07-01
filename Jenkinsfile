@@ -1,10 +1,10 @@
 pipeline {
     agent any // Donde se ejecutará el pipeline
 
-    tools {
+    //tools {
         // Asegúrate de que las herramientas (ej. Docker) estén disponibles si no compartiste el socket.
         // Si compartiste el socket, Jenkins usará el Docker de tu host.
-    }
+    //}
 
     stages {
         stage('Checkout Code') {
