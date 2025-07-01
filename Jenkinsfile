@@ -2,14 +2,14 @@ pipeline {
     agent any // Donde se ejecutará el pipeline
 
     tools {
-        # Asegúrate de que las herramientas (ej. Docker) estén disponibles si no compartiste el socket.
-        # Si compartiste el socket, Jenkins usará el Docker de tu host.
+        // Asegúrate de que las herramientas (ej. Docker) estén disponibles si no compartiste el socket.
+        // Si compartiste el socket, Jenkins usará el Docker de tu host.
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/TU_USUARIO/mi-lab-kubernetes.git' // Reemplaza con la URL de tu repo GitHub
+                git 'https://github.com/sssepulved/mi-lab-kubernetes.git' // Reemplaza con la URL de tu repo GitHub
             }
         }
 
